@@ -25,4 +25,8 @@ ${urls
 `
 
 writeFileSync(resolve(root, 'public/sitemap.xml'), xml)
-console.log(`sitemap.xml жазылды (${urls.length} URL)`)
+
+const robots = `User-agent: *\nAllow: /\n\nSitemap: ${base}/sitemap.xml\n`
+writeFileSync(resolve(root, 'public/robots.txt'), robots)
+
+console.log(`sitemap.xml (${urls.length} URL) + robots.txt жазылды`)
