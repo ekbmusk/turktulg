@@ -1,0 +1,47 @@
+.site-head {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter: blur(8px);
+}
+
+.site-head__inner {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-top: 1.4rem;
+  padding-bottom: 1.4rem;
+  gap: 1rem;
+}
+
+.site-head__mark {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5em;
+  line-height: 1;
+}
+
+.site-head__mark-main {
+  font-family: var(--serif-display);
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: 0.01em;
+}
+
+.site-head__mark-sub {
+  font-family: var(--serif-body);
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--bronze);
+}
+
+.site-head__tag {
+  white-space: nowrap;
+}
+
+@media (max-width: 560px) {
+  .site-head__tag {
+    display: none;
+  }
+}

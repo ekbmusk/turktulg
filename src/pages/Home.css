@@ -1,0 +1,35 @@
+.home__hero {
+  padding-top: clamp(3.5rem, 9vw, 7rem);
+  padding-bottom: clamp(3rem, 7vw, 5.5rem);
+}
+
+.home__hero .label {
+  display: block;
+  margin-bottom: 1.6rem;
+}
+
+.home__title {
+  font-family: var(--serif-display);
+  font-weight: 500;
+  font-size: clamp(2.4rem, 6.5vw, 4.6rem);
+  line-height: 1.05;
+  letter-spacing: -0.018em;
+  max-width: 18ch;
+}
+
+.home__intro {
+  margin-top: 1.8rem;
+  max-width: 46ch;
+  font-size: 1.18rem;
+  color: var(--ink-soft);
+}
+
+.home__list-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.home__list-head .label {
+  margin-bottom: 0.9rem;
+}

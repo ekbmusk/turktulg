@@ -1,0 +1,25 @@
+.site-foot {
+  margin-top: 7rem;
+}
+
+.site-foot__inner {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 3.5rem;
+}
+
+.site-foot__name {
+  font-family: var(--serif-display);
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 560px) {
+  .site-foot__inner {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+}

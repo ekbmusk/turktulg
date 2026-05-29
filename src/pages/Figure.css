@@ -1,0 +1,195 @@
+.fig {
+  padding-top: 2.2rem;
+}
+
+.fig__back {
+  display: inline-block;
+  margin-bottom: 3rem;
+  transition: color 0.3s var(--ease);
+}
+.fig__back:hover {
+  color: var(--bronze);
+}
+
+/* Бас бөлім */
+.fig__head {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 3.5rem;
+  align-items: start;
+  margin-bottom: 3.5rem;
+}
+
+.fig__head-text .label {
+  display: block;
+  margin-bottom: 1.2rem;
+}
+
+.fig__name {
+  font-family: var(--serif-display);
+  font-weight: 500;
+  font-size: clamp(2.6rem, 6vw, 4.4rem);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+}
+
+.fig__lead {
+  margin-top: 1.6rem;
+  font-size: 1.32rem;
+  line-height: 1.55;
+  font-style: italic;
+  color: var(--ink-soft);
+  max-width: 32ch;
+}
+
+.fig__facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  margin-top: 2.4rem;
+}
+.fig__facts dt {
+  margin-bottom: 0.5rem;
+}
+.fig__facts dd {
+  font-size: 1.05rem;
+  max-width: 24ch;
+}
+
+/* Портрет */
+.fig__portrait {
+  position: relative;
+}
+.fig__portrait img {
+  width: 100%;
+  aspect-ratio: 252 / 308;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  box-shadow: 0 24px 60px -34px rgba(28, 26, 22, 0.5);
+}
+.fig__portrait-year {
+  position: absolute;
+  bottom: -0.7rem;
+  right: -0.7rem;
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  background: var(--bronze);
+  color: var(--paper);
+  padding: 0.3rem 0.7rem;
+}
+
+/* Дене */
+.fig__body {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 4rem;
+  margin-top: 3.5rem;
+}
+
+.fig__section-label {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.fig__para {
+  margin-bottom: 1.4rem;
+  font-size: 1.12rem;
+}
+.fig__para:first-of-type::first-letter {
+  font-family: var(--serif-display);
+  font-size: 3.4rem;
+  line-height: 0.8;
+  float: left;
+  padding: 0.12em 0.14em 0 0;
+  color: var(--bronze);
+}
+
+/* Бүйір панелі */
+.fig__aside {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  position: sticky;
+  top: 6rem;
+  align-self: start;
+}
+
+.fig__awards {
+  list-style: none;
+}
+.fig__awards li {
+  padding: 0.8rem 0;
+  border-top: 1px solid var(--line);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+.fig__awards li:first-child {
+  border-top: 0;
+  padding-top: 0;
+  font-weight: 700;
+  color: var(--bronze);
+}
+
+.fig__timeline {
+  list-style: none;
+}
+.fig__tl-item {
+  display: grid;
+  grid-template-columns: 3.2rem 1fr;
+  gap: 0.9rem;
+  padding: 0.65rem 0;
+  border-top: 1px solid var(--line);
+}
+.fig__tl-item:first-child {
+  border-top: 0;
+}
+.fig__tl-year {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--bronze);
+}
+.fig__tl-text {
+  font-size: 0.98rem;
+  line-height: 1.4;
+  color: var(--ink-soft);
+}
+
+/* Архив суреттері */
+.fig__gallery {
+  margin-top: 5rem;
+}
+.fig__photo {
+  max-width: 540px;
+}
+.fig__photo img {
+  width: 100%;
+  border: 1px solid var(--line);
+}
+.fig__caption {
+  margin-top: 1rem;
+  font-style: italic;
+  font-size: 0.98rem;
+  color: var(--muted);
+  max-width: 46ch;
+}
+
+/* Бейімделу */
+@media (max-width: 860px) {
+  .fig__head {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .fig__portrait {
+    max-width: 280px;
+  }
+  .fig__body {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .fig__aside {
+    position: static;
+  }
+}
