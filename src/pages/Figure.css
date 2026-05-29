@@ -96,6 +96,7 @@
 .fig__para {
   margin-bottom: 1.4rem;
   font-size: 1.12rem;
+  max-width: 74ch;
 }
 .fig__para:first-of-type::first-letter {
   font-family: var(--serif-display);
