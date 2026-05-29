@@ -1,16 +1,9 @@
 import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
 import './FigureCard.css'
 
-export default function FigureCard({ figure, index }) {
+export default function FigureCard({ figure }) {
   return (
-    <motion.article
-      className="fig-card"
-      initial={{ opacity: 0, y: 22 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-60px' }}
-      transition={{ duration: 0.7, ease: [0.22, 0.61, 0.36, 1], delay: index * 0.08 }}
-    >
+    <article className="fig-card">
       <Link to={`/tulga/${figure.slug}`} className="fig-card__link">
         <div className="fig-card__frame">
           <img
@@ -27,6 +20,6 @@ export default function FigureCard({ figure, index }) {
           <span className="fig-card__more label">Толығырақ →</span>
         </div>
       </Link>
-    </motion.article>
+    </article>
   )
 }

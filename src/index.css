@@ -13,7 +13,8 @@
   --serif-body: 'PT Serif', Georgia, serif;
   --sans: 'PT Sans', system-ui, sans-serif;
 
-  --measure: 64rem;
+  --measure: 80rem;
+  --pad: 2.5rem;
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
@@ -76,7 +77,13 @@ img {
   width: 100%;
   max-width: var(--measure);
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 var(--pad);
+}
+
+@media (max-width: 680px) {
+  :root {
+    --pad: 1.25rem;
+  }
 }
 
 /* Архивтік сурет өңдеуі */

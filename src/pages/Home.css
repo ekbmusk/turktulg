@@ -1,9 +1,9 @@
 .home__hero {
-  padding-top: clamp(3.5rem, 9vw, 7rem);
-  padding-bottom: clamp(3rem, 7vw, 5.5rem);
+  padding-top: clamp(3rem, 8vw, 6rem);
+  padding-bottom: clamp(2.6rem, 6vw, 4.8rem);
 }
 
-.home__hero .label {
+.home__eyebrow {
   display: block;
   margin-bottom: 1.6rem;
 }
@@ -11,17 +11,23 @@
 .home__title {
   font-family: var(--serif-display);
   font-weight: 500;
-  font-size: clamp(2.4rem, 6.5vw, 4.6rem);
-  line-height: 1.05;
+  font-size: clamp(2.3rem, 6vw, 4.8rem);
+  line-height: 1.04;
   letter-spacing: -0.018em;
-  max-width: 18ch;
+  max-width: 16ch;
+  text-wrap: balance;
 }
 
 .home__intro {
   margin-top: 1.8rem;
-  max-width: 46ch;
-  font-size: 1.18rem;
+  max-width: 52ch;
+  font-size: clamp(1.05rem, 1.4vw, 1.22rem);
   color: var(--ink-soft);
+  text-wrap: pretty;
+}
+
+.home__list {
+  margin-top: 1rem;
 }
 
 .home__list-head {
@@ -32,4 +38,13 @@
 
 .home__list-head .label {
   margin-bottom: 0.9rem;
+}
+
+@media (max-width: 680px) {
+  .home__title {
+    max-width: 100%;
+  }
+  .home__intro {
+    margin-top: 1.4rem;
+  }
 }

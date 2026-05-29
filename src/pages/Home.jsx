@@ -1,14 +1,8 @@
-import { motion } from 'framer-motion'
 import { figures } from '../data/figures.js'
 import FigureCard from '../components/FigureCard.jsx'
 import Seo from '../seo/Seo.jsx'
 import { SITE_NAME, SITE_DESC, SITE_URL, abs } from '../seo/config.js'
 import './Home.css'
-
-const fade = {
-  initial: { opacity: 0, y: 18 },
-  animate: { opacity: 1, y: 0 },
-}
 
 const homeJsonLd = {
   '@context': 'https://schema.org',
@@ -50,34 +44,19 @@ export default function Home() {
         image={figures[0]?.portrait}
         jsonLd={homeJsonLd}
       />
+
       <section className="wrap home__hero">
-        <motion.span
-          className="label"
-          {...fade}
-          transition={{ duration: 0.6, ease: [0.22, 0.61, 0.36, 1] }}
-        >
-          Тарихи тұлғалар жинағы
-        </motion.span>
+        <span className="label home__eyebrow">Тарихи тұлғалар жинағы</span>
 
-        <motion.h1
-          className="home__title"
-          {...fade}
-          transition={{ duration: 0.8, delay: 0.08, ease: [0.22, 0.61, 0.36, 1] }}
-        >
-          Түркістан топырағында
-          <br />
-          дүниеге келген тұлғалар
-        </motion.h1>
+        <h1 className="home__title">
+          Түркістан топырағында дүниеге келген тұлғалар
+        </h1>
 
-        <motion.p
-          className="home__intro"
-          {...fade}
-          transition={{ duration: 0.8, delay: 0.18, ease: [0.22, 0.61, 0.36, 1] }}
-        >
+        <p className="home__intro">
           Қасиетті өлкеде туып, ел игілігі үшін еңбек еткен ұрпақтардың өмірбаяны
           мен мұрасына арналған жинақ. Әр тұлға — туған жердің тарихи жадының бір
           парағы.
-        </motion.p>
+        </p>
       </section>
 
       <section className="wrap home__list">
