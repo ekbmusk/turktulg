@@ -20,10 +20,11 @@ function buildJsonLd(figure, path) {
         description: figure.lead,
         image: abs(figure.portrait),
         birthDate: figure.birthDateISO,
+        ...(figure.deathDateISO && { deathDate: figure.deathDateISO }),
         birthPlace: { '@type': 'Place', name: figure.birthplaceFull || figure.birthplace },
         nationality: figure.nationality,
-        award: figure.awards,
-        knowsAbout: ['Мақта шаруашылығы', 'Агрономия', 'Түркістан тарихы'],
+        ...(figure.awards?.length && { award: figure.awards }),
+        ...(figure.knowsAbout?.length && { knowsAbout: figure.knowsAbout }),
       },
       {
         '@type': 'ProfilePage',
@@ -110,6 +111,14 @@ export default function Figure() {
                   <time dateTime={figure.birthDateISO}>{figure.bornFull}</time>
                 </dd>
               </div>
+              {figure.diedFull && (
+                <div>
+                  <dt className="label">Қайтыс болған</dt>
+                  <dd>
+                    <time dateTime={figure.deathDateISO}>{figure.diedFull}</time>
+                  </dd>
+                </div>
+              )}
               <div>
                 <dt className="label">Туған жері</dt>
                 <dd>{figure.birthplace}</dd>
@@ -147,14 +156,18 @@ export default function Figure() {
           </section>
 
           <aside className="fig__aside">
-            <div className="fig__panel">
-              <span className="label fig__section-label">Марапаттары</span>
-              <ul className="fig__awards">
-                {figure.awards.map((a, i) => (
-                  <li key={i}>{a}</li>
-                ))}
-              </ul>
-            </div>
+            {figure.awards?.length > 0 && (
+              <div className="fig__panel">
+                <span className="label fig__section-label">
+                  {figure.awardsLabel || 'Марапаттары'}
+                </span>
+                <ul className="fig__awards">
+                  {figure.awards.map((a, i) => (
+                    <li key={i}>{a}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
             <div className="fig__panel">
               <span className="label fig__section-label">Өмір жолы</span>
