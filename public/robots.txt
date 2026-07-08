@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://turkistan-tulgalary.kz/sitemap.xml
+Sitemap: https://www.turkistantulgalary.kz/sitemap.xml

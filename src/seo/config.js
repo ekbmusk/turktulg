@@ -1,6 +1,6 @@
 // ВАЖНО: деплойдан кейін осы доменді нақты мекенжайға ауыстырыңыз.
 // Канондық URL, sitemap.xml және Open Graph осы мәнге сүйенеді.
-export const SITE_URL = 'https://turkistan-tulgalary.kz'
+export const SITE_URL = 'https://www.turkistantulgalary.kz'
 export const SITE_NAME = 'Түркістан тұлғалары'
 export const SITE_DESC =
   'Түркістан топырағында дүниеге келген тарихи тұлғалардың өмірбаяны мен мұрасы. Қасиетті өлкеде туып, ел игілігі үшін еңбек еткен ұрпақтар жайлы жинақ.'

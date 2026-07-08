@@ -14,6 +14,7 @@ function buildJsonLd(figure, path) {
         '@type': 'Person',
         '@id': `${url}#person`,
         name: figure.name,
+        alternateName: figure.alternateNames,
         url,
         jobTitle: figure.role,
         description: figure.lead,
@@ -56,7 +57,10 @@ export default function Figure() {
   if (!figure) return <Navigate to="/" replace />
 
   const path = `/tulga/${figure.slug}`
-  const metaDesc = `${figure.name} — ${figure.role}. ${figure.lead} Туған жылы: ${figure.bornFull}, ${figure.birthplace}.`
+  const altNames = figure.alternateNames?.length
+    ? ` (${figure.alternateNames.slice(0, 2).join(', ')})`
+    : ''
+  const metaDesc = `${figure.name}${altNames} — ${figure.role}. ${figure.lead} Туған жылы: ${figure.bornFull}, ${figure.birthplace}.`
 
   return (
     <article className="fig">
@@ -110,6 +114,12 @@ export default function Figure() {
                 <dt className="label">Туған жері</dt>
                 <dd>{figure.birthplace}</dd>
               </div>
+              {figure.alternateNames?.length > 0 && (
+                <div>
+                  <dt className="label">Есімнің өзге жазылуы</dt>
+                  <dd>{figure.alternateNames.join(', ')}</dd>
+                </div>
+              )}
             </motion.dl>
           </div>
 
